@@ -40,6 +40,12 @@ php artisan key:generate
 php artisan migrate:fresh --seed
 ```
 
+## Feature
+| Feature | Status |
+| --- | --- |
+| Auth Scaffolding | OK |
+| Roles & Permissions | OK |
+
 ### Default User
 Login : super@admin.dev
 Pass  : password

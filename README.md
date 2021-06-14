@@ -26,7 +26,7 @@ composer install
 npm install
 # build dev 
 npm run dev
-
+```
 
 ### Next Step
 Before we start web server make sure we already generate app key, configure `.env` file and do migration.
@@ -39,6 +39,10 @@ php artisan key:generate
 # laravel migrate & seed some data
 php artisan migrate:fresh --seed
 ```
+
+### Next Step
+Login : super@admin.dev
+Pass  : password
 
 ## Contributing
 Thank you for considering contributing to this repo!

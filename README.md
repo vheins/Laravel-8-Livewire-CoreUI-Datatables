@@ -40,7 +40,7 @@ php artisan key:generate
 php artisan migrate:fresh --seed
 ```
 
-### Next Step
+### Default User
 Login : super@admin.dev
 Pass  : password
 

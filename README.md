@@ -11,6 +11,16 @@
 
 Include simple Data Table with Livewire (CRUD).
 
+| Feature | Status |
+| --- | --- |
+| Bootstrap CoreUI Themes | OK |
+| Tailwind CSS | OK |
+| Livewire | OK |
+| Auth Scaffolding | OK |
+| Roles & Permissions | OK |
+| Sweet Alert JS | OK |
+| Laravel Datatables | OK |
+
 ## Installation
 ### First clone or download this repository
 ```shell
@@ -39,12 +49,6 @@ php artisan key:generate
 # laravel migrate & seed some data
 php artisan migrate:fresh --seed
 ```
-
-## Feature
-| Feature | Status |
-| --- | --- |
-| Auth Scaffolding | OK |
-| Roles & Permissions | OK |
 
 ### Default User
 Login : super@admin.dev

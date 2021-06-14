@@ -24,6 +24,18 @@ $ npm install
 $ npm run dev
 ```
 
+### Next Step
+Before we start web server make sure we already generate app key, configure `.env` file and do migration.
+
+```shell
+# create copy of .env
+$ cp .env.example .env
+# create laravel key
+$ php artisan key:generate
+# laravel migrate & seed some data
+$ php artisan migrate:fresh --seed
+```
+
 ## Contributing
 Thank you for considering contributing to this repo!
 

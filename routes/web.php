@@ -22,7 +22,11 @@ Auth::routes();
 Route::get('/dashboard', ['\App\Http\Controllers\HomeController', 'index'])->name('dashboard');
 
 Route::prefix('backoff')->group(function () {
-    Route::view('/users','backoff.user')->middleware('can:user-index')->name('backoff.user');
-    Route::view('/roles','backoff.role')->middleware('can:role-index')->name('backoff.role');
-    Route::view('/permissions','backoff.permission')->middleware('can:permission-index')->name('backoff.permission');
+    Route::view('/user','backoff.user')->middleware('can:user-index')->name('backoff.user');
+    Route::view('/role','backoff.role')->middleware('can:role-index')->name('backoff.role');
+    Route::view('/permission','backoff.permission')->middleware('can:permission-index')->name('backoff.permission');
+});
+
+Route::prefix('dev')->group(function () {
+    Route::view('/menu','backoff.menu')->middleware('can:menu-index')->name('dev.menu');
 });

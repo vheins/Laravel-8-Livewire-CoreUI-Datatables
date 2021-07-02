@@ -1,28 +1,27 @@
 <?php
-
 return [
 
     /*
      * Application title to display in <title> tag
      */
-    'title' => 'Digitama Enterprise System',
+    'title' => env('APP_NAME','Digitama Enterprise System'),
 
     /*
      * Text to put in the top-left of the menu bar. logo_mini is shown when the navbar is collapsed.
      * NOTE: This is a non-escaped string, so you can put HTML in here
      */
-    'logo' => '<strong>Digitama</strong> Enterprise',
+    'logo' => env('APP_LOGO','Digitama Enterprise System'),
 
     /*
      * Menu builder
      */
+    //'menu' => $menu::with('submenu')->whereNull('parent_id')->get()->toArray(),
+    //array_remove_empty(Menu::with('submenu')->whereNull('parent_id')->get()->toArray())
+    /*
     'menu' => [
-
-
-
         [
             'text' => 'Dashboard',          // The text to be displayed inside the menu.
-            'url' => '/dashboard',     // The URL behind the text. Mutually exclusive with "route" option.
+            'url' => 'dashboard',     // The URL behind the text. Mutually exclusive with "route" option.
             'icon' => 'th',      // Name of FontAwesome icon to display. Note that you have to use the "far", "fas" or "fal" modifier behind the icon.
             'fa-family' => 'fas'
         ],
@@ -46,6 +45,7 @@ return [
                     'text' => 'Warehouses',
                     'icon' => 'warehouse',
                     'fa-family' => 'fas',
+                    'asdasd' => 'asdasd'
                 ],
                 [
                     'text' => 'Store',

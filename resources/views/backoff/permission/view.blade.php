@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
        <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><i class="mr-2 fas fa-user-edit"></i><b>User Info {{ $name }}</b></h5>
+                <h5 class="modal-title" id="exampleModalLabel"><i class="mr-2 fas fa-user-edit"></i><b>Permission Info {{ $name }}</b></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>

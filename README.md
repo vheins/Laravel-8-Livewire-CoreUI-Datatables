@@ -20,6 +20,7 @@ Include simple Data Table with Livewire (CRUD).
 | Roles & Permissions | OK |
 | Sweet Alert JS | OK |
 | Laravel Datatables | OK |
+| Menu Builder | OK |
 | Crud Generator | On Dev |
 
 ## Installation

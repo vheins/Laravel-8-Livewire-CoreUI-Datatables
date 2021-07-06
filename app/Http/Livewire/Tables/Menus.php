@@ -3,7 +3,6 @@
 namespace App\Http\Livewire\Tables;
 
 use App\Models\Menu;
-use Spatie\Permission\Models\Permission;
 use Mediconesystems\LivewireDatatables\Column;
 use Mediconesystems\LivewireDatatables\NumberColumn;
 use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
@@ -20,8 +19,8 @@ class Menus extends LivewireDatatable
     public function columns()
     {
         $collum = [
-            NumberColumn::name('id')->filterable(),
-            NumberColumn::name('parent_id')->filterable(),
+            NumberColumn::name('id'),
+            NumberColumn::name('parent_id'),
             Column::name('text')->filterable(),
             Column::name('url')->filterable(),
             Column::name('route')->filterable(),

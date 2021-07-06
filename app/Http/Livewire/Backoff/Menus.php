@@ -10,11 +10,16 @@ class Menus extends Component
     public $menus, $menu_id, $updateMode, $selectMenu;
     public $sec_no, $text, $url, $icon, $target, $badge_text, $badge_context, $badge_pill, $fa_family, $is_section, $is_route, $can, $parent_id;
 
-    protected $listeners = ['view','edit'];
+    protected $listeners = ['view','edit','canUpdated' => 'setCan'];
+
+    public function setCan($object)
+    {
+            $this->can = $object['value'];
+    }
 
     public function render()
     {
-        $this->selectMenu = Menu::select('id','text','url')->get();
+        $this->selectMenu = Menu::select('id','text','url','route','is_route')->get();
         return view('backoff.menu.index');
     }
 
@@ -45,6 +50,13 @@ class Menus extends Component
             'parent_id'     => 'nullable|exists:menus,id'
             //'email' => 'required|email|unique:menus,email',
         ]);
+
+        if($this->validate->fails()) {
+            $this->dispatchBrowserEvent('swal', [
+                'type' => 'error',
+                'message' => "Menu " . $this->text . " Failed to Save!!"
+            ]);
+        }
 
         if($validated['is_route']){
             $validated['route'] = $validated['url'];

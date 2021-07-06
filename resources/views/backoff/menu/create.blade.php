@@ -11,11 +11,33 @@
            <div class="modal-body">
                 <form>
                     <div class="form-group">
+                        <label for="nameAdd">Permission</label>
+                        {{--<input type="text" class="form-control" id="canAdd" placeholder="Enter can" wire:model.defer="can">--}}
+
+                        <livewire:component.select-permission
+                            name="can"
+                            placeholder="Select Permission"
+                            :searchable="true"
+                            wire:model.defer="can"
+                        />
+                    </div>
+
+                    <div class="form-group">
                         <label for="nameAdd"><b>Parent Menu</b></label>
                         <select class="custom-select"  wire:model.defer="parent_id">
                             <option selected>Select Parent Menu</option>
                             @foreach ($selectMenu as $menu)
-                                <option value="{{$menu->id}}">{{$menu->text}} <b>#link({{$menu->url}})</b></option>
+                                <option value="{{$menu->id}}">
+                                    {{$menu->text}}
+                                    @if(is_null($menu->url) && is_null($menu->route))
+                                    @else
+                                        @if($menu->is_route == 1 )
+                                            #Route({{$menu->route}})
+                                        @else
+                                            #Link({{$menu->url}})
+                                        @endif
+                                    @endif
+                                </option>
                             @endforeach
                         </select>
                     </div>
@@ -76,10 +98,6 @@
                     <div class="form-group">
                         <label for="nameAdd">sec_no</label>
                         <input type="text" class="form-control" id="sec_noAdd" placeholder="Enter sec_no" wire:model.defer="sec_no">
-                    </div>
-                    <div class="form-group">
-                        <label for="nameAdd">Permission</label>
-                        <input type="text" class="form-control" id="canAdd" placeholder="Enter can" wire:model.defer="can">
                     </div>
 
                 </form>

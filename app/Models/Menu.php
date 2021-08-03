@@ -16,6 +16,11 @@ class Menu extends Model
     protected $hidden = [
         'created_at',
         'updated_at',
+        'id',
+        'sec_no',
+        'is_section',
+        'is_route',
+        'parent_id'
     ];
 
     public function Parent()

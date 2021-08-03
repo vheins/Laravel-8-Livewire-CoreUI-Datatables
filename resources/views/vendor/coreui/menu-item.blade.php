@@ -16,6 +16,8 @@
             @each('coreui::menu-item', $item['submenu'], 'item')
         </ul>
     </li>
+@elseif(isset($item['text']) && $item['href'] == "#")
+    <li class="c-sidebar-nav-title">{{ $item['text'] }}</li>
 @else
     <li class="c-sidebar-nav-item {{ $item['class'] }}">
         <a href="{{ $item['href'] }}"

@@ -11,7 +11,7 @@
            <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="nameAdd">Permission</label>
+                        <label for="nameAdd"><b>Permission</b></label>
                         {{--<input type="text" class="form-control" id="canAdd" placeholder="Enter can" wire:model.defer="can">--}}
 
                         <livewire:component.select-permission
@@ -96,7 +96,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="nameAdd">sec_no</label>
+                        <label for="nameAdd"><b>sec_no</b></label>
                         <input type="text" class="form-control" id="sec_noAdd" placeholder="Enter sec_no" wire:model.defer="sec_no">
                     </div>
 

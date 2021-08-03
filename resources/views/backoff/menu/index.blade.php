@@ -5,7 +5,6 @@
         </button>
     @endcan
     @include('backoff.menu.create')
-    @include('backoff.menu.view')
     <livewire:tables.menus key='{{ now() }}'>
 
 </div>

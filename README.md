@@ -32,12 +32,8 @@ git clone https://github.com/aRhez0903/Laravel-8-Livewire-CoreUI-Datatables.git
 After clone or download this repository, next step is install all dependency required by laravel and laravel-mix.
 
 ```shell
-# install composer-dependency
-composer install
-# install npm package
-npm install
-# build dev 
-npm run dev
+# install composer-dependency & npm package & build dev
+composer install && npm install && npm run dev
 ```
 
 ### Next Step
